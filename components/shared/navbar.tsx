@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import {
     Select,
@@ -19,11 +20,32 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
-import { UserRound } from 'lucide-react'
+import { ShoppingCart, UserRound } from 'lucide-react'
 import Link from 'next/link'
-import { Label } from '../ui/label'
-
+import { useForm } from 'react-hook-form'
+import handleAxios from '@/api/instance'
+import { loadState, saveState } from '@/helpers/storage'
+import { useRouter } from 'next/navigation'
 const Navbar = () => {
+    const { push } = useRouter()
+    const { register, handleSubmit, formState: { errors } } = useForm()
+    const submit = (data: any) => {
+        handleAxios.post("/users", data)
+            .then((res) => {
+                saveState("user", res.data)
+                console.log(res.data);
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+            .finally(() => {
+                if (loadState("user")) {
+                    push("/home")
+                }
+            })
+    }
+    const user = loadState("user")
+
     return (
         <div className='flex items-center justify-between my-4'>
             <Link href={"/"}><img src="/logo.png" alt="" /></Link>
@@ -61,30 +83,52 @@ const Navbar = () => {
                         </SelectGroup>
                     </SelectContent>
                 </Select>
-                <Dialog>
-                    <DialogTrigger asChild>
-                        <Button className='bg-[#3F51B5] hover:bg-[#3f51b5df]'><UserRound className='w-4 h-4 mr-2' /> Kirish</Button>
-                    </DialogTrigger>
-                    <DialogContent className="sm:max-w-[425px]">
-                        <DialogHeader>
-                            <DialogTitle>Assalomu alaykum Xush kelibsiz!</DialogTitle>
-                            <DialogDescription>
-                                Hisobingizga kirish uchun login va parolni kiriting
-                            </DialogDescription>
-                        </DialogHeader>
-                        <div className="grid gap-4 py-4">
-                            <div className="grid grid-cols-4 items-center gap-4">
-                                <Input id="username" className="col-span-4" placeholder='Username' />
-                            </div>
-                            <div className="grid grid-cols-4 items-center gap-4">
-                                <Input id="password" className="col-span-4" placeholder='********' />
-                            </div>
+                {
+                    user && (
+                        <div className='flex items-center gap-4'>
+                            <Button variant={"secondary"}><ShoppingCart /></Button>
+                            <Link href={"/profile"}>
+                                <img className='rounded-full w-[45px] h-[45px]' src={user?.avatar} />
+                            </Link>
                         </div>
-                        <DialogFooter>
-                            <Button className='bg-[#3F51B5] hover:bg-[#3f51b5df] w-full' type="submit">Save changes</Button>
-                        </DialogFooter>
-                    </DialogContent>
-                </Dialog>
+                    )
+                }
+                {
+                    !user && (
+                        <Dialog>
+                            <DialogTrigger asChild>
+                                <Button className='bg-[#3F51B5] hover:bg-[#3f51b5df]'><UserRound className='w-4 h-4 mr-2' /> Kirish</Button>
+                            </DialogTrigger>
+                            <DialogContent className="sm:max-w-[425px]">
+                                <DialogHeader>
+                                    <DialogTitle>Assalomu alaykum Xush kelibsiz!</DialogTitle>
+                                    <DialogDescription>
+                                        Hisobingizga kirish uchun login va parolni kiriting
+                                    </DialogDescription>
+                                </DialogHeader>
+                                <form onSubmit={handleSubmit(submit)}>
+                                    <div className="grid gap-4 py-4">
+                                        <div className="grid grid-cols-4 items-center gap-4">
+                                            <Input id="username" {...register('name', { required: true })} className="col-span-4" placeholder='Username' />
+                                        </div>
+                                        <div className="grid grid-cols-4 items-center gap-4">
+                                            <Input id="email" {...register('email', { required: true })} className="col-span-4" placeholder='Email' />
+                                        </div>
+                                        <div className="grid grid-cols-4 items-center gap-4">
+                                            <Input id="password" {...register('password', { required: true })} className="col-span-4" placeholder='********' />
+                                        </div>
+                                        <div className="grid grid-cols-4 items-center gap-4">
+                                            <Input id="avatar" {...register('avatar', { required: true })} className="col-span-4" placeholder='Avatar' />
+                                        </div>
+                                    </div>
+                                    <DialogFooter>
+                                        <Button className='bg-[#3F51B5] hover:bg-[#3f51b5df] w-full' type="submit">Save changes</Button>
+                                    </DialogFooter>
+                                </form>
+                            </DialogContent>
+                        </Dialog>
+                    )
+                }
             </div>
         </div>
     )
