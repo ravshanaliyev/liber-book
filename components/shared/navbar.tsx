@@ -15,7 +15,7 @@ import Link from 'next/link'
 
 const Navbar = () => {
     return (
-        <div className='flex items-center justify-around my-4'>
+        <div className='flex items-center justify-between my-4'>
             <Link href={"/"}><img src="/logo.png" alt="" /></Link>
             <div className='flex items-center gap-4'>
                 <Select>
