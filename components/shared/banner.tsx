@@ -15,7 +15,7 @@ const Banner = () => {
     return (
         <div className='my-4 flex items-center gap-4'>
             <div className="w-5/6 rounded-xl bg-[#EEF4FF] px-16 py-6">
-                <h1 className='text-xl mb-4'>Kop oqilayotgan kitoblar</h1>
+                <h1 className='text-xl mb-4'>Ko&#39;p o&#39;qilayotgan kitoblar</h1>
                 <Carousel
                     opts={{
                         align: "start",
