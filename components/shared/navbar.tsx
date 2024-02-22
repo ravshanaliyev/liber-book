@@ -22,10 +22,10 @@ import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { ShoppingCart, UserRound } from 'lucide-react'
 import Link from 'next/link'
-import { useForm } from 'react-hook-form'
 import handleAxios from '@/api/instance'
 import { loadState, saveState } from '@/helpers/storage'
 import { useRouter } from 'next/navigation'
+import { useForm } from 'react-hook-form'
 const Navbar = () => {
     const { push } = useRouter()
     const { register, handleSubmit, formState: { errors } } = useForm()

@@ -1,6 +1,7 @@
 import Banner from "@/components/shared/banner";
 import Navbar from "@/components/shared/navbar";
 import Sections from "@/components/shared/sections";
+import Tooltip from "@/components/shared/tooltip";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar />
       <Sections />
       <Banner />
+      <Tooltip />
     </div>
   );
 }
