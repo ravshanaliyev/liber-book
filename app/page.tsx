@@ -1,3 +1,4 @@
+import Banner from "@/components/shared/banner";
 import Navbar from "@/components/shared/navbar";
 import Sections from "@/components/shared/sections";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <div className="w-[1400px] mx-auto">
       <Navbar />
       <Sections />
+      <Banner />
     </div>
   );
 }
