@@ -8,10 +8,20 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+import {
+    Dialog,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
+} from "@/components/ui/dialog"
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { UserRound } from 'lucide-react'
 import Link from 'next/link'
+import { Label } from '../ui/label'
 
 const Navbar = () => {
     return (
@@ -51,7 +61,30 @@ const Navbar = () => {
                         </SelectGroup>
                     </SelectContent>
                 </Select>
-                <Button className='bg-[#3F51B5] hover:bg-[#3f51b5df]'><UserRound className='w-4 h-4 mr-2' /> Kirish</Button>
+                <Dialog>
+                    <DialogTrigger asChild>
+                        <Button className='bg-[#3F51B5] hover:bg-[#3f51b5df]'><UserRound className='w-4 h-4 mr-2' /> Kirish</Button>
+                    </DialogTrigger>
+                    <DialogContent className="sm:max-w-[425px]">
+                        <DialogHeader>
+                            <DialogTitle>Assalomu alaykum Xush kelibsiz!</DialogTitle>
+                            <DialogDescription>
+                                Hisobingizga kirish uchun login va parolni kiriting
+                            </DialogDescription>
+                        </DialogHeader>
+                        <div className="grid gap-4 py-4">
+                            <div className="grid grid-cols-4 items-center gap-4">
+                                <Input id="username" className="col-span-4" placeholder='Username' />
+                            </div>
+                            <div className="grid grid-cols-4 items-center gap-4">
+                                <Input id="password" className="col-span-4" placeholder='********' />
+                            </div>
+                        </div>
+                        <DialogFooter>
+                            <Button className='bg-[#3F51B5] hover:bg-[#3f51b5df] w-full' type="submit">Save changes</Button>
+                        </DialogFooter>
+                    </DialogContent>
+                </Dialog>
             </div>
         </div>
     )
