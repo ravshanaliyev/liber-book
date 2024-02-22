@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
+import { Client, HydrationProvider } from "react-hydration-provider";
 import "./globals.css";
 
 const inter = Cairo({ subsets: ["latin"] });
@@ -16,7 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <HydrationProvider>
+          <Client>
+            {children}
+          </Client>
+        </HydrationProvider>
+      </body>
     </html>
   );
 }
