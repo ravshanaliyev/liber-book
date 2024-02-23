@@ -16,7 +16,7 @@ const HomePage = () => {
             <Navbar />
             <div className="my-6 rounded-xl bg-[#EEF4FF] px-16 py-6">
                 <div className="flex gap-6 items-center">
-                    <Image className='rounded-xl' src={user.avatar} alt="" width={150} height={120} />
+                    <Image className='rounded-xl w-[180px] h-[150px] object-cover' src={user.avatar} alt="" width={150} height={120} />
                     <div className="flex flex-col gap-2">
                         <h2 className='text-3xl'>{user.name}</h2>
                         <p>Email: {user.email}</p>

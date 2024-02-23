@@ -40,7 +40,7 @@ const Navbar = () => {
             })
             .finally(() => {
                 if (loadState("user")) {
-                    push("/home")
+                    push("/profile")
                 }
             })
     }
@@ -122,7 +122,7 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                     <DialogFooter>
-                                        <Button className='bg-[#3F51B5] hover:bg-[#3f51b5df] w-full' type="submit">Save changes</Button>
+                                        <Button className='bg-[#3F51B5] hover:bg-[#3f51b5df] w-full' type="submit">Kirish</Button>
                                     </DialogFooter>
                                 </form>
                             </DialogContent>
