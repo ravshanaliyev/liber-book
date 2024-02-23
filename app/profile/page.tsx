@@ -15,10 +15,6 @@ import {
 import { Button } from '@/components/ui/button'
 
 const HomePage = () => {
-    const { push } = useRouter()
-    const user = loadState("user")
-    if (!user) return push("/")
-
     return (
         <div>
             <div style={{ backgroundImage: `url(/bg.svg)`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} className="rounded-xl bg-[#ff7f4d] flex justify-between ">

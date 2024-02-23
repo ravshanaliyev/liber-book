@@ -5,10 +5,14 @@ import { Book, NotebookPen, Save, Settings, Wallet, WalletCards } from 'lucide-r
 import Link from 'next/link'
 import Profile from '@/components/shared/profile'
 import SidebarItem from '@/components/shared/sidebar-item'
+import { useRouter } from 'next/navigation'
+import { loadState } from '@/helpers/storage'
 
 
 const ProfileLayout = ({ children }: { children: React.ReactNode }) => {
-
+    const { push } = useRouter()
+    const user = loadState("user")
+    if (!user) return push("/")
     return (
         <div className="w-[1400px] mx-auto">
             <Navbar />
