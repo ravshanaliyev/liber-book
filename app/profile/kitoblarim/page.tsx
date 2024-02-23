@@ -61,6 +61,126 @@ const Kitoblarim = () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="card flex gap-6 rounded-xl shadow-lg border p-6">
+                            <Image src={"/card1.jfif"} className="w-[200px] h-[250px] rounded-[14px] object-cover" alt="" width={80} height={85} />
+                            <div className="flex flex-col">
+                                <div className="flex w-[880px] justify-between items-center">
+                                    <div className="flex flex-col gap-2">
+                                        <h1 className='text-3xl text-[#11142D]'>1984</h1>
+                                        <span className='text-[#3F51B5] uppercase'>Siyosat, Fanstastika</span>
+                                    </div>
+                                    <div className="flex flex-col gap-2">
+                                        <div className="flex gap-2">
+                                            {(Array.from({ length: 4 }).map((_, index) => (
+                                                <Star className='text-[#ff7f4d]' key={index} />
+                                            )))}
+                                        </div>
+                                        <span className='text-[#3F51B5] text-xl'>4.9</span>
+                                    </div>
+                                </div>
+                                <p className='my-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                <div className="flex justify-between items-center">
+                                    <div className='flex gap-10'>
+                                        <div className="flex flex-col">
+                                            <p className='text-gray-500'>Muallif</p>
+                                            <p className='text-lg'>Kevin Smiley</p>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <p className='text-gray-500'>Nashriyot</p>
+                                            <p className='text-lg'>Printarea Studio</p>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <p className='text-gray-500'>Yil</p>
+                                            <p className='text-lg'>2024</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-3">
+                                        <Button variant={"secondary"}><Headphones /></Button>
+                                        <Button variant={"secondary"}><BookMarked /></Button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card flex gap-6 rounded-xl shadow-lg border p-6">
+                            <Image src={"/card1.jfif"} className="w-[200px] h-[250px] rounded-[14px] object-cover" alt="" width={80} height={85} />
+                            <div className="flex flex-col">
+                                <div className="flex w-[880px] justify-between items-center">
+                                    <div className="flex flex-col gap-2">
+                                        <h1 className='text-3xl text-[#11142D]'>1984</h1>
+                                        <span className='text-[#3F51B5] uppercase'>Siyosat, Fanstastika</span>
+                                    </div>
+                                    <div className="flex flex-col gap-2">
+                                        <div className="flex gap-2">
+                                            {(Array.from({ length: 4 }).map((_, index) => (
+                                                <Star className='text-[#ff7f4d]' key={index} />
+                                            )))}
+                                        </div>
+                                        <span className='text-[#3F51B5] text-xl'>4.9</span>
+                                    </div>
+                                </div>
+                                <p className='my-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                <div className="flex justify-between items-center">
+                                    <div className='flex gap-10'>
+                                        <div className="flex flex-col">
+                                            <p className='text-gray-500'>Muallif</p>
+                                            <p className='text-lg'>Kevin Smiley</p>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <p className='text-gray-500'>Nashriyot</p>
+                                            <p className='text-lg'>Printarea Studio</p>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <p className='text-gray-500'>Yil</p>
+                                            <p className='text-lg'>2024</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-3">
+                                        <Button variant={"secondary"}><Headphones /></Button>
+                                        <Button variant={"secondary"}><BookMarked /></Button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="card flex gap-6 rounded-xl shadow-lg border p-6">
+                            <Image src={"/card1.jfif"} className="w-[200px] h-[250px] rounded-[14px] object-cover" alt="" width={80} height={85} />
+                            <div className="flex flex-col">
+                                <div className="flex w-[880px] justify-between items-center">
+                                    <div className="flex flex-col gap-2">
+                                        <h1 className='text-3xl text-[#11142D]'>1984</h1>
+                                        <span className='text-[#3F51B5] uppercase'>Siyosat, Fanstastika</span>
+                                    </div>
+                                    <div className="flex flex-col gap-2">
+                                        <div className="flex gap-2">
+                                            {(Array.from({ length: 4 }).map((_, index) => (
+                                                <Star className='text-[#ff7f4d]' key={index} />
+                                            )))}
+                                        </div>
+                                        <span className='text-[#3F51B5] text-xl'>4.9</span>
+                                    </div>
+                                </div>
+                                <p className='my-4'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                <div className="flex justify-between items-center">
+                                    <div className='flex gap-10'>
+                                        <div className="flex flex-col">
+                                            <p className='text-gray-500'>Muallif</p>
+                                            <p className='text-lg'>Kevin Smiley</p>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <p className='text-gray-500'>Nashriyot</p>
+                                            <p className='text-lg'>Printarea Studio</p>
+                                        </div>
+                                        <div className="flex flex-col">
+                                            <p className='text-gray-500'>Yil</p>
+                                            <p className='text-lg'>2024</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-3">
+                                        <Button variant={"secondary"}><Headphones /></Button>
+                                        <Button variant={"secondary"}><BookMarked /></Button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </TabsContent>
                 <TabsContent value="elektron">
