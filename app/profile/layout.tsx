@@ -18,7 +18,7 @@ const ProfileLayout = ({ children }: { children: React.ReactNode }) => {
             <Navbar />
             <Profile />
             <div className="my-6 flex gap-6">
-                <div className="w-1/6 rounded-xl shadow-lg">
+                <div className="w-1/6 rounded-xl shadow-lg h-[250px]">
                     <div className="px-4 py-6 flex flex-col gap-4">
                         {sidebarLinks.map((link, index) => (
                             <Link href={link.path} key={index} className="flex items-center gap-3">
