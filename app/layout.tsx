@@ -1,7 +1,11 @@
+
 import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
 import { Client, HydrationProvider } from "react-hydration-provider";
 import "./globals.css";
+import { Provider } from "react-redux";
+import { store } from "@/redux/store";
+import StoreProvider from "./store-provider";
 
 const inter = Cairo({ subsets: ["latin"] });
 
@@ -20,8 +24,11 @@ export default function RootLayout({
       <body className={inter.className}>
         <HydrationProvider>
           <Client>
-            {children}
+            <StoreProvider>
+              {children}
+            </StoreProvider>
           </Client>
+
         </HydrationProvider>
       </body>
     </html>
