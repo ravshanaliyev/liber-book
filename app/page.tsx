@@ -1,4 +1,5 @@
 import Banner from "@/components/shared/banner";
+import Categories from "@/components/shared/categories";
 import Navbar from "@/components/shared/navbar";
 import Sections from "@/components/shared/sections";
 import Tooltip from "@/components/shared/tooltip";
@@ -10,6 +11,7 @@ export default function Home() {
       <Sections />
       <Banner />
       <Tooltip />
+      <Categories />
     </div>
   );
 }

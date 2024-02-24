@@ -21,7 +21,6 @@ import {
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { ShoppingCart, UserRound } from 'lucide-react'
-import { HiOutlineShoppingBag } from 'react-icons/hi2'
 import Link from 'next/link'
 import handleAxios from '@/api/instance'
 import { loadState, saveState } from '@/helpers/storage'
@@ -30,7 +29,7 @@ import { useForm } from 'react-hook-form'
 import { useSelector } from 'react-redux'
 const Navbar = () => {
     const { push } = useRouter()
-    const { register, handleSubmit, formState: { errors } } = useForm()
+    const { register, handleSubmit } = useForm()
     const submit = (data: any) => {
         handleAxios.post("/users", data)
             .then((res) => {
