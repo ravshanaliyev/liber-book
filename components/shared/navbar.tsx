@@ -21,11 +21,13 @@ import {
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import { ShoppingCart, UserRound } from 'lucide-react'
+import { HiOutlineShoppingBag } from 'react-icons/hi2'
 import Link from 'next/link'
 import handleAxios from '@/api/instance'
 import { loadState, saveState } from '@/helpers/storage'
 import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
+import { useSelector } from 'react-redux'
 const Navbar = () => {
     const { push } = useRouter()
     const { register, handleSubmit, formState: { errors } } = useForm()
@@ -46,6 +48,7 @@ const Navbar = () => {
     }
     const user = loadState("user")
 
+    const cart_products = useSelector((state: any) => state.cart.cart_products)
     return (
         <div className='flex items-center justify-between my-4'>
             <Link href={"/"}><img src="/logo.png" alt="" /></Link>
@@ -86,7 +89,18 @@ const Navbar = () => {
                 {
                     user && (
                         <div className='flex items-center gap-4'>
-                            <Button variant={"secondary"}><ShoppingCart /></Button>
+                            <Link href="/profile/kitoblarim">
+                                <div className="relative">
+                                    {/* <ShoppingCart  /> */}
+                                    <Button variant={"secondary"}><ShoppingCart className='text-[25px] ' /></Button>
+                                    <div className="absolute top-[-6px] right-[5px] w-[20px] h-[20px] rounded-full bg-[#3F51B5] text-white text-[14px] flex justify-center items-center">
+                                        {cart_products
+                                            .map((product: any) => product.count)
+                                            .reduce((a: number, b: number) => a + b, 0)}
+                                    </div>
+                                </div>
+                            </Link>
+                            {/* <Button variant={"secondary"}><ShoppingCart /></Button> */}
                             <Link href={"/profile"}>
                                 <img className='rounded-full w-[45px] h-[45px]' src={user?.avatar} />
                             </Link>
