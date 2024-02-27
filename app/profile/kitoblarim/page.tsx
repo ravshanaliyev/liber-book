@@ -7,7 +7,7 @@ import {
     TabsTrigger,
 } from "@/components/ui/tabs"
 import Image from 'next/image'
-import { BookMarked, Headphones, Star } from 'lucide-react'
+import { BookMarked, DeleteIcon, Headphones, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useSelector } from 'react-redux'
 
