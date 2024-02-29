@@ -1,14 +1,11 @@
 "use client"
-import { loadState } from '@/helpers/storage'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
 import React from 'react'
 import {
     Select,
     SelectContent,
     SelectGroup,
     SelectItem,
-    SelectLabel,
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"

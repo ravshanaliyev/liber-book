@@ -7,14 +7,12 @@ import {
     TabsTrigger,
 } from "@/components/ui/tabs"
 import Image from 'next/image'
-import { BookMarked, DeleteIcon, Headphones, Star } from 'lucide-react'
+import { BookMarked, Headphones, Star } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useSelector } from 'react-redux'
 
 const Kitoblarim = () => {
     const cart_products = useSelector((state: any) => state.cart.cart_products)
-    console.log(cart_products);
-
     return (
         <div>
             <h1 className='text-3xl text-[#11142D] mb-4'>Kitoblarim</h1>
