@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import { Card, CardContent } from "@/components/ui/card"
 import {
@@ -12,6 +13,7 @@ import Link from 'next/link'
 import { Button } from '../ui/button'
 import { Heart } from 'lucide-react'
 import { books } from '@/data'
+import Autoplay from "embla-carousel-autoplay"
 const Banner = () => {
     return (
         <div className='my-4 flex items-center gap-4'>
@@ -22,6 +24,11 @@ const Banner = () => {
                         align: "start",
                     }}
                     className="w-full max-w-6xl"
+                    plugins={[
+                        Autoplay({
+                            delay: 2000,
+                        }),
+                    ]}
                 >
                     <CarouselContent>
                         {books.map((book, index) => (

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import {
     Carousel,
@@ -9,6 +10,7 @@ import {
 import { Card, CardContent } from '../ui/card'
 import Link from 'next/link'
 import Image from 'next/image'
+import Autoplay from "embla-carousel-autoplay"
 const Categories = () => {
     return (
         <div className='my-8'>
@@ -18,6 +20,11 @@ const Categories = () => {
                     align: "start",
                 }}
                 className="w-full "
+                plugins={[
+                    Autoplay({
+                        delay: 2000,
+                    }),
+                ]}
             >
                 <CarouselContent>
                     {categories.map((category, index) => (
@@ -26,7 +33,7 @@ const Categories = () => {
                                 <Card>
                                     <Link href={`/categories${category.url}`} className="w-full">
                                         <CardContent className="flex flex-col gap-2  items-center justify-center border-none">
-                                            <Image src={category.image_url} alt="" className='mt-4 h-[162px] w-full rounded-lg object-cover' width={187.4} height={162} />
+                                            <img src={category?.image_url} alt="" className='mt-4 h-[162px] w-full rounded-lg object-cover' width={187.4} height={162} />
                                             <p className='mb-[-10px]'>{category.name}</p>
                                         </CardContent>
                                     </Link>
