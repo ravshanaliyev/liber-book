@@ -33,7 +33,7 @@ const Categories = () => {
                                 <Card>
                                     <Link href={`/categories${category.url}`} className="w-full">
                                         <CardContent className="flex flex-col gap-2  items-center justify-center border-none">
-                                            <img src={category?.image_url} alt="" className='mt-4 h-[162px] w-full rounded-lg object-cover' width={187.4} height={162} />
+                                            <Image src={category?.image_url} alt="" className='mt-4 h-[162px] w-full rounded-lg object-cover' width={187.4} height={162} />
                                             <p className='mb-[-10px]'>{category.name}</p>
                                         </CardContent>
                                     </Link>
@@ -56,54 +56,54 @@ const categories = [
         id: 1,
         url: "/jahon-adabiyoti",
         name: 'Jahon adabiyoti',
-        image_url: 'https://s3-alpha-sig.figma.com/img/b1b2/fae2/567b0026b0060e44e1237d226a753d04?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=VwOGA6eDlu1ujiKelzXKe8bDWP6L6y7qzGQUog1rl0GpS4qpobjf7xKhE3J6ddr2Q1WcT047bCIPztYAVs6DWdQBrStly2VCmuc0iaseNwIGxfK-D8qfDWL~9CVwHUuLZo9SwjnYxpWrH8KvPeemZi~e9oUrcFKzwbvQyVzObhhO9WyXzVb7tiiXgD0soVoCNp2mMswmP7QidUuCi84zPsErtF1-xR8XYAX7NwgAr35~hF6oCTE85PpWTvInG-hQu02WHQxVUnTuVLAEiK66mQeRGg0OBsCrlWCDzenplEksgbjtqzugIFTLPwXL2EKNULjANf1RsVMU~k3~H-B7OQ__',
+        image_url: 'https://s3-alpha-sig.figma.com/img/b1b2/fae2/567b0026b0060e44e1237d226a753d04?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=T6z1nzh0DNAEp2RqoakHLq-0pg3rsZdWnWXfCy9wu-I-cRCFDgcoXowAgHMTPci6exsvu6cAmprNHPx82ZQhUmoPj7fEFGJzEn4GOQPD1ojy8ztbRUIkqPgHdgtXGyof6TnB-QrBcjKV-oJUJEpUlomqtaoD0KuzEX-h5l8u-K-w8bSQuzrxtXX6L7kl73grQfx5NHs0PNVr7wFDu8e2H8o6Q5vFk7pCrMFmXx264sfuiT0w8tnAcIqWwrFMA~7Y9tYiXUDDCxwiD-30oHPA-mQK37VmCg~Lu9TBxpbpZbH6S9Gk2rYc6Yih8wBKetuOEip5Ac6W-Ah7FpIRkUXpeA__',
     },
     {
         id: 2,
         url: "/uzbek-adabiyoti",
         name: 'Uzbek adabiyoti',
-        image_url: 'https://s3-alpha-sig.figma.com/img/7d94/8b6f/a2e3145dd6529ca766e7f3b114f987d8?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Q8ev9H8HFnUfTZT6m9OrJL5wusDGPWRh7nCTyWmYXESlvKtVdY7wf4i6gSgL-3ArW8i6DNIgIWLppsgU0hzurFv-eckVjbtOu51pbQOKHHuDf-cAATLyCMtoCIS1jOO8RcWmTnhuxYW4v~AzeYs82wkAl2dI3ZKabHVb8Li4jqoRFcCwdi9sTzXt7cC5fnwgARmaH0LLH7MTCJfVLCHar0EC~Z27mQ53tbKjczMTGZQdGDAfUlypshl-4DqjKUnI7izODmcwd3pldeCKECZiFkeHDXqp1TjlrWPKdrlA1F63Twh95gENih0Wz4WOtw~Bk6~91N71Q63eOc3Al~PJMw__',
+        image_url: 'https://s3-alpha-sig.figma.com/img/7d94/8b6f/a2e3145dd6529ca766e7f3b114f987d8?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=edxzzyXC9-Y6df8TtaJorUu3WOfO8RDCTahL4q8snZWVfcJZg9kakd7wDxNIyQFacc1CmpuxQ05gpNs8zNuBORJPtwIrhktsVS4J-vcJ2rB18EzBPCRzbUAHFgJcQvt~zIhZ46XnEUYpA64B58YOMyixKUqJw2i~ix~iusXHnee6M-l-ks4HxzcEJrFhb~U0BUJtr3We8-vxT7fsBy~qZ5p9eNPY04jzRru5cE0giCe0r8U5g0X6g-GebDhqEmE1lReG4E-3UPp1bLZ87blbwgkW-vzxwB9mbkqmRrpK8AnUUkJb93uPIzSg~3rMx-yP2bxoP-2mbWlL22m8~isHFA__',
     },
     {
         id: 3,
         url: "/biznes-va-psixologiya",
         name: 'Biznes va psixologiya',
-        image_url: 'https://s3-alpha-sig.figma.com/img/980e/5745/b64d15cdda2d320762998db793326873?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mFeEFFn6m6UwyxqGZciflXaeUfTxEI7h9iZrQy-BV7SrmeH6vK72laCX-E9tBKScaC2fCEC7HwsB5xi~MfQe4Mem2EfuAv2hEtmdje2-McppQf-S5SDgNPL-fl~2J7zOhT2cwuj5pYr6jGbdzI4IjAjTMDFZGbIAKnkuH1yKFhXRZodujxLmgZzvP~KqVfP9zJfv9z9Fw~FpRzSZhIJL-bc8RUmBbM5KxI0v9pS2b2kuKu7b4-I5uQXbDk3MZHvEG~tD38TtNsngGrJUKHc4t7L5YncJXY0zZEdSMy3upfWLaa0O1PLs9muR5KwZPU7eZQt2vjW-IQTSzAVHeOXZSQ__',
+        image_url: 'https://s3-alpha-sig.figma.com/img/980e/5745/b64d15cdda2d320762998db793326873?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lU0582N6gjqfcGZ8iGaOT1iQSSlErrhvIgBBvonCaE7b8HpfTvmooIzh3genSDW6LKE7gyRd5v8hxJGWjU3oavEov1weplHHmKMr~6iopGxrcCKI6GqAVhYr5WgLjEjtXq9UJYB6FmU9cTvazsjWrx8WNjuvU9ZiQOFZFgjR~e0Ck8TXXDcNHxr8WZsqcKYdJ7nob~YCD3UM8Q8C21pWBmwOKDgi7gshpKgploBMBdc3ifpgdIHQjrZB27l4AaA0UYk3HI6aoYhh20S0Kicz8WI9GkPNgZPh501btctM2lYtqs-80Zs7EFpf9F4ERyumk8xpmWGbVP5NNPNOzrn73A__',
     },
     {
         id: 4,
         url: "/bolalar-adabiyoti",
         name: 'Bolalar adabiyoti',
-        image_url: 'https://s3-alpha-sig.figma.com/img/7682/fd4e/4ace2f7a22783371eb9ab1cdc157b6b8?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=jiCOPxvjGd0EnNTlAYg8sKBV1ybrld7K-7-og5sQ41apW4JxPJXZsy5d9FoY2tzSTE16JPkOO8cCSy4lSUQ2KeG3Kk0XHSTLy8P2C1OlJzCw8TPh18MU2bbtKzP654EJ3MGbvCTvD-jKB7wIQqQCgRUfDrv45hE2rbf9f0hHvkMfhCgDDSTswSoeCSckWDzj7p7eL6RDV68mMPyE-IkYruDNeKV9vjV9zKy7T42ZBjths1u8TY0hj0s8rGBOgEefLsLkP~AhCq~osA-kmGpTDHjdwHyq560YYUhK-LBrmzqxUndV66e5D~uAiR7zdZE2Z8OkEPFplFDg07KiyqVWyQ__',
+        image_url: 'https://s3-alpha-sig.figma.com/img/7682/fd4e/4ace2f7a22783371eb9ab1cdc157b6b8?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eRblaE06MVtAA7MUA1-hV~99PkCPTK8wB5C7BmBx3d2GkfsF82lQ-voE6Rws2hjfeB~XtHAiyAvTW1OYfy~1kGQIR6VrMp0VRRbK6tyjgwsyzxPaE6mjQwXgiCnyQGFbziU4UYXa8XsKlTWIfVbS5ujDcPcU1QYA0RSlQQX6pp9v9xRuperROAAG-CkmpQzmXThLtVfyf0gWlV5gOx4OTKNXXFbyGmPw6PamYXs0sWwwrNeLMFzZhewLpnrJyqa3aoAKTv4NaDGiNOZafQu~6KmorfopmJ8ASWT8kyFZH0zzV99m7AF4aixTpBiUFdeNU95qGSWk8dL4aYXMGZdOqQ__',
     },
     {
         id: 5,
         url: "/detektivlar",
         name: 'Detektivlar',
-        image_url: 'https://s3-alpha-sig.figma.com/img/618c/2fb7/6c9454e461b3ce8b8f2ee761af7c6033?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=cDKpTU7NFxV44cd2JqN--~DsprtEacwumiDHJvPvY37DBC2cMq47v3lXwitpJPzzQmt97h-Fc4ZLfCV0aWmSJ6pY3jicw7dxE86fxLdU4khJznwBUJmJlZgIXEN1OVwCSf9FYJgwBKqKoyFzcctNOw0LxKHsFoYfv91HFPd1UK8wILEdmj-3Iw7J9K0VqLCj9yyh8kuhriMctG9T7VGQ~wRKS1hWYH~D7TYDYdP9l7slsQM7DPmmQP2oAdHiybTlyj~jvgaYL-uqT0WGqlgXNSmklVPl20eKqaeiHuaEAcCOTJdTGNDSyZe5dl~NvseDdqKCoIXNh6WwC48I47whuQ__',
+        image_url: 'https://s3-alpha-sig.figma.com/img/618c/2fb7/6c9454e461b3ce8b8f2ee761af7c6033?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gXmFA25l~ojTU8EuagAeEWH7g5HPuxYuCq35mjzGelx03ybXCEdY2wMJNXEkUyplrRdWZmyF62qnxV4l4AHn8EZKCtp0S2VBRNkftL3f81wN0zamcHMqtqz7~HPOpsrEqf19FT0txEcjm6rQf76VmvPuwYt3VkD3ZNdPlhy7QjeTejj2yY2TS3DRZgM7argN3fX1gbDRFl-ajHTgBCOSxqOkMsZqzKQmRiUDBGpWsZk0WUTfkPQxAs8yvn0hbcEDKHyex4Arno0T0mDJYbgepwUf2Ym2HYTYTO8hJwPJ2haMGywvIOBc9cErIr6KZxnEeIDvmP9qcm5lPfww6dYuig__',
     },
     {
         id: 6,
         url: "/fantastika",
         name: 'Fantastika',
-        image_url: 'https://s3-alpha-sig.figma.com/img/000f/eba6/6b8e2287ac861589c70db4e3f9ba1303?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=GVFESnDyeekb9kIUulRY0vQ3CxMRoxQ8upwD5-Km6C0OYLQjWY6dpXW1jKcqWREKSVWhPbKiWjW3ziRCyoxS906ELiPnud26yVY6RUv1b5uFQ1TKZec0q2Gza3W~-1au4881XotySNerMjvwEKozRutp96yhAvkamRnmuyJUGxeJegSwtR60j-GH5NIW5rnxX~hTJcKIkCT-Cnbmc3WOkeGTDcPhYNuU1tGVPoHFu6LASrDQ3lGMR1k1M0F4RYYnOROnYWjqPGjU4euQR0trVHioecf-bXCGM44p4DV1eYYrXB-ghjTzMKA5Jr~1hAfPYa0LV~elW2a5GHM724-RIA__',
+        image_url: 'https://s3-alpha-sig.figma.com/img/000f/eba6/6b8e2287ac861589c70db4e3f9ba1303?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=c6Pt7uG0ADuBLtMDPn~6Jw8j47hcblveZa6CZkd70gY7CjRhYyZ-shA~G~4R1k5WXXkZSV34rNI3et4JjpbO3C05BIueoDH6bT6760dS3kvutuUI8A2tjK8IPd7jS2-H3ajxObTHofI-QlpHNw6gGPm4Oqnh05-uaS47Rbv5cyyF892uBmVQWhr~sPcfriudxeiBXDONJ7zS-53yJkXVsIjGcpUjLpnIDLNUKFXjBaQUjgVEJ2d5ZRyTN70j9Ya-WellktQr-ItDlpQxOz-Vqdc48UYfbo3M1TWCGZTXoyTZrGjtu2JUStHOVLcfS2PH0vm70AdMyj8iazqemgLzTw__',
     },
     {
         id: 7,
         url: "/diniy-adabiyoti",
         name: 'Diniy adabiyoti',
-        image_url: 'https://s3-alpha-sig.figma.com/img/048f/7bc9/07d4abfd4b24443f46e9eb6af1dc89bf?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=W9vX7X3J2ZBBKV1MzOjYoldUS9mZqWnpcy-v-2XoIogWIQ369RbVworFP8B3~hgbCOys-ymyhVkwEBYy~rICxUs5E30aK4-Opxxi-g8LM6DVnTW3qLi~M7FZMCMBm231YQDI4hAPMA699L~v7qZwrev3SvSIhtrfAXcXE89LnhbsDiYI77Oe-PZ3qhHQNs4Vnt6EX~q1jXSNU8oSlbwVUPcw5x~wews33kvIjITIVXsC5tZE-3jYqZ0EwnDf7Xf7J9kQo-OrlcSNQNkpwfsXZLZ1dSbAx~2GeAHTO9Vo7asW4ydQvaiddjrEGU54PGne1YvrbuHYaRqEeppyAkHdfQ__'
+        image_url: 'https://s3-alpha-sig.figma.com/img/048f/7bc9/07d4abfd4b24443f46e9eb6af1dc89bf?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=YdiIBEv9Bfzbzcy6JQxwpvu1sRyf5R~VFvzKlp4aXERJYhTog5x488YTCQAubXDEr1pR7qTbHm5sJoC-GEwoEX-0LVhhlxG76hltKbB~L~y6wmqdEuNMn~zzlrLE6oA7mXIQFrOVAiIe5LaLP8HHg1681~lQnPfU9TNfJZCuj9Y2Bn4NcTt8NWv3BYo-eRl0eeYCNsQbBx0umEUEbVsPtqasmeCvecL6Gj~U4WD26XnXnXm-M9NNP26NGBgG6SnuVfSGLb01ZjoS4pGk~gtmWf-BPzCwV8~Z8DhKOLYwlUGyz7vo3yRf7S6RVLhlBrBbUNoOXrBR~AAxNb8515ckUQ__'
     },
     {
         id: 8,
         url: "/zamonaviy-uzbek-adabiyoti",
         name: 'Zamonaviy uzbek adabiyoti',
-        image_url: 'https://s3-alpha-sig.figma.com/img/2b81/a709/3aa5a9e82007af63bc1e6a5442b77ba8?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=nOLO5a8kZ1z5DaPU7MNNwqkFLY9g-TOIb1nTfsSNWJuZRERW35ZKH8K98ABfwsdYQgFqtFxzkorhR0K-3Q9Kj8s7W0UVqc8fd46RS7Z0drFYgskECl6omGuBx58u50Kg7GE16LwXkWaLNz9XAYOkD2l2TdhY2Uc6UF4C7~MbKi1m2ttAzX7Bs6AETlQOuk-67TRsDA0HH~GKid4h6P6BQW80zYwSijMZ4--g~gY7GHGNpOfBfFWK6inc6E27~BXWNd7sxoCPme99ZapQnwgcEdOvAKksSiK8EPLKJ8gZBs2o7LRykobnG512O4Pt-030J90W6kqIcFwyO9f-yeYb0w__'
+        image_url: 'https://s3-alpha-sig.figma.com/img/2b81/a709/3aa5a9e82007af63bc1e6a5442b77ba8?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=eMHHfOuOkRaVOw1yL3~06JDN0q4h72jdCcQhpcTqvItvt1HmvSHKjViTpNAXsT2DQzYtKnDFqu1EQSyEuaYPeNNiZUaa7brmM2ozSuUURbHZbKV8zta7rMxB1DfS6RItJN~ZNuBkybECpeL4zkkkGDewzquq3aPTaG6QBNZhpHTigiYK1UIQf2on0mIoYIj7Jwh9H9cBeaqB0n8j-vmZ0jB4Ln2cHM5CumiFEcVmNNg2JwsgUcAcTtfVVSnv58SVTNYPAiRf-0GGMFLnNKiow3oUad7RTpxfQgZ7HM69EBAjOjkAHfMtjRtbx-N6GraWUhPEu5tkIP-qKJ-3pBxrHA__'
     },
     {
         id: 9,
         url: "/fan-va-talim",
         name: 'Fan va talim',
-        image_url: 'https://s3-alpha-sig.figma.com/img/ff29/4c51/876afbebec030646c875365057afcc36?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=hbPL24KeWIuG4K0m60O7VNDjYXl8kYUhOmFf-VJXzJI0KG0No8e13eiL73namyBdgZK~kAlrG7uZ7RdXhtCCpdW~opj7ui1QGDW3omSPD-Gj9kQbiYPDgO94Rk~8dXIJyttzugh3N3Bwqk7DeT5ion4aT5vR8FvsfRmS~s8oSG2wUoNsqpPUr1TZt9lL3Xvm6C2EJle5L4xrX4vwocy8DU5NYqCiXs7oq-wCvdNuWURxkEdwT9kxuh9tC3pYnRauPV8lZ7KeFLmhbU7C34luZ6~QpRz5UX7tYFLzF6gVj224ht0T09spTFMzxceOaPGyCd-vSQoLCaUW~cX-GSgXvQ__'
+        image_url: 'https://s3-alpha-sig.figma.com/img/ff29/4c51/876afbebec030646c875365057afcc36?Expires=1714953600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=ETBNy8O0ZEpYfgdGRBo2N1i6psIXCYnOuhlk7KFaUeiyQ~T8uhs4yJhjTQZ7OzBdCrL3udCY~rhT3QQQn5fAmR0J6g9pYlLljQucQ9XXAg9SY2y63PwkH-a8~h3~v2NsaZFGgj~DBhQjinll0zbIz5rLU0HONIg1pM5vuiAvXq9Pq86DFeGFNvwZ~v8XL7ms5PEFgJhdmR93Q1eLODKgk7ZotrXnjHb6G1gWKjvzIryR2ugo9Hj9dhRrQb3TXtVVYGrMShfpjwwB-IoqBS60z8lKLUpZdi5F5Ra50rHCxt67S43ukVsEpGB7i-HE09c2jMGccgLZCUztdhn36v4Lwg__'
     }
 ]
